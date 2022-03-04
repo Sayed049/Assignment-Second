@@ -1,11 +1,16 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+/* Full website specific features */
 body{
     font-family: 'Poppins', sans-serif;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+}
+/* Navigation style */
+.nav-bar{
+    margin-top: 20px;
+    margin-left: 156px;
 }
 nav a{
     text-decoration: none;
@@ -13,33 +18,27 @@ nav a{
     font-size: 16px;
     margin-right: 36px;
 }
-.nav-bar{
-    margin-top: 20px;
-    margin-left: 156px;
-}
 .font-awesome{
     margin-top: 20px;
     margin-left: calc(100% - 300px);
     background-color: #E02C6D;
     padding: 8px 8px;
 }
-.font{
-    padding-left: 30px;
-}
 .font-awesome:hover{
     border: 2px solid greenyellow;
     border-radius: 10px;
     transition-duration: 4s;
 }
+.anchor-font{
+    padding-left: 30px;
+}
+/* Heading Styles */
 .header-section{
     display: flex;
     background-color: #2D25A0;
     width: 100%;
     height: 677px;
     margin-bottom: 70px;
-}
-.first-section{
-    display: flex;
 }
 .first-section img{
     position: absolute;
@@ -79,16 +78,17 @@ span{
     border-radius: 10px;
     transition-duration: 4s;
 }
+/* player Blogs Styles */
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 24px;
     grid-row-gap: 24px;
-}
-main{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 .player{
     background-color: #FFFFFF;
@@ -119,6 +119,7 @@ main{
     color: #18191F;
     font-size: 16px;
 }
+/* Adding Footer Styles */
 footer{
     text-align: center;
 }
@@ -137,6 +138,7 @@ footer{
     height: 110px;
     width: 480px;
 }
+/* Responsive For Mobile Device */
 @media only screen and (max-width: 688px){
     .nav-bar{
         display: none;
@@ -144,14 +146,31 @@ footer{
     .font-awesome{
         display: none;
     }
-    .ss{
-        display: grid;
-        grid-template-columns: repeat(1, fr);
+    .first-section{
+        display: none;
     }
     .players{
         grid-template-columns: repeat(1, 1fr);
     }
     footer{
         width: 100%;
-    } */
+    }
+}
+/* Responsive for Tablet Device */
+@media only screen and (max-width: 1024px) and (min-width: 690px){
+    .nav-bar{
+        display: none;
+    }
+    .font-awesome{
+        display: none;
+    }
+    .first-section{
+        display: none;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        width: 100%;
+    }
 }
